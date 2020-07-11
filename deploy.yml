@@ -25,4 +25,4 @@ spec:
       volumes:
       - name: aniket_storage
         persistentVolumeClaim:
-          claimName: my-eks-pvc1
+          claimName: ambastapvc
