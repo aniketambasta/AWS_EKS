@@ -1,7 +1,7 @@
   apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: tonysc
+  name: tonysc1
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: io1
