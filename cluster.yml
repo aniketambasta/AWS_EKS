@@ -5,12 +5,12 @@ metadata:
   region: ap-south-1
 nodeGroups:
   - name: ng1
-    desiredCapacity: 1
+    desiredCapacity: 2
     instanceType: t2.micro
     ssh:
       publicKeyName: aniket1234
   - name: ng2
-    desiredCapacity: 1
+    desiredCapacity: 2
     instanceType: t2.small
     ssh:
       publicKeyName: aniket1234
