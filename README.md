@@ -1,3 +1,7 @@
+
+![alt text](https://miro.medium.com/max/2800/1*c_alK7iZgOyKMTCQBxpOBQ.png)
+
+
 # AWS_EKS
 
 
@@ -19,6 +23,5 @@
 ### Terraform code of cluster.yml-:
 https://github.com/aniketambasta/AWS_EKS/blob/master/cluster.yml
 
-![alt text](https://miro.medium.com/max/2800/1*c_alK7iZgOyKMTCQBxpOBQ.png)
 
 
