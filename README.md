@@ -27,7 +27,7 @@
 ##### Be running the same Amazon Machine Image (AMI)
 ##### Use the same Amazon EKS worker node IAM role.
 #### 5. Now go inside the directory where terraform code is present and run the commands
-      terraform commands are-:
+   ##### terraform commands are-:
       terraform init
       terraform apply --aprove
 
