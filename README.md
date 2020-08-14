@@ -14,3 +14,8 @@
 #### 1.Download the AWS CLI program, add it to path variables and configure it to use AWS using the command - aws configure --profile Admin. As terraform will also be using the same credentials for contacting AWS.
 
 #### 2.Write terraform code for deploying a Kubernetes cluster on AWS using EKS.
+
+
+### Terraform code of cluster.yml-:
+https://github.com/aniketambasta/AWS_EKS/blob/master/cluster.yml
+
