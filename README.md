@@ -19,6 +19,6 @@
 ### Terraform code of cluster.yml-:
 https://github.com/aniketambasta/AWS_EKS/blob/master/cluster.yml
 
-![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFWV0Hj0IgMb4gpWOUJjvhAjQ6ojy82wZRKg&usqp=CAU)
+![alt text](https://miro.medium.com/max/2800/1*c_alK7iZgOyKMTCQBxpOBQ.png)
 
 
