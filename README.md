@@ -27,9 +27,13 @@
 ##### Be running the same Amazon Machine Image (AMI)
 ##### Use the same Amazon EKS worker node IAM role.
 #### 5. Now go inside the directory where terraform code is present and run the commands
-   ##### terraform commands are-:
       terraform init
       terraform apply --aprove
+      
+##### You can see some services created which is required for cluster like security-groups, load balancer,volumes etc.
+
+##### Now we have to update the config file of Kubernetes to use aws, so that we can use cluster from local system. use command for update file:      
+aws eks update-kubeconfig --name cluster-name
 
 
 ### Terraform code of cluster.yml-:
