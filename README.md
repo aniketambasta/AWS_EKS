@@ -33,7 +33,7 @@
 ##### You can see some services created which is required for cluster like security-groups, load balancer,volumes etc.
 
 ##### Now we have to update the config file of Kubernetes to use aws, so that we can use cluster from local system. use command for update file:      
-aws eks update-kubeconfig --name cluster-name
+      aws eks update-kubeconfig --name cluster-name
 
 
 ### Terraform code of cluster.yml-:
