@@ -51,13 +51,47 @@ Amazon **VPC** for isolation
 
 
 
-
-
-
-
-
-
-
+### to create eks cluster
+```
+      apiVersion: eksctl.io/v1alpha5
+      kind: ClusterConfig
+      metadata:
+        name: ekscluster
+        region: ap-south-1
+      nodeGroups:
+        - name: ng1
+          desiredCapacity: 2
+          instanceType: t2.micro
+          ssh:
+            publicKeyName: aniket1234
+        - name: ng2
+          desiredCapacity: 2
+          instanceType: t2.small
+          ssh:
+            publicKeyName: aniket1234
+          ssh:
+            publicKeyName: aniket1234
+```
+we have to run our cluster by running this command-:
+```
+      eksctl create cluster -f cluster.yml
+   ```   
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
