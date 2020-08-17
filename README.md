@@ -97,14 +97,10 @@ Amazon **VPC** for isolation
       aws eks update-kubeconfig --name cluster-name
 
 
-### Terraform code of cluster.yml-:
-https://github.com/aniketambasta/AWS_EKS/blob/master/cluster.yml
-### Terraform coe of deploy.yml-:
-https://github.com/aniketambasta/AWS_EKS/blob/master/deploy.yml
-### Terraform coe of pvc.yml-:
-https://github.com/aniketambasta/AWS_EKS/blob/master/pvc.yml
-### Terraform coe of sc.yml-:
-https://github.com/aniketambasta/AWS_EKS/blob/master/sc.yml
+### Terraform code of [cluster.yml](https://github.com/aniketambasta/AWS_EKS/blob/master/cluster.yml)
+### Terraform coe of [deploy.yml](https://github.com/aniketambasta/AWS_EKS/blob/master/deploy.yml)
+### Terraform coe of [pvc.yml](https://github.com/aniketambasta/AWS_EKS/blob/master/pvc.yml)
+### Terraform coe of [sc.yml](https://github.com/aniketambasta/AWS_EKS/blob/master/sc.yml)
 
 
 ### Few Screenshos of the task are-:
