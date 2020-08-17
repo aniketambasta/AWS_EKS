@@ -47,6 +47,7 @@ Amazon **VPC** for isolation
 - Then, launch worker nodes that register with the Amazon EKS cluster. We provide you with an AWS CloudFormation template that automatically configures your nodes.
 - When your cluster is ready, you can configure your favorite Kubernetes tools (such as kubectl) to communicate with your cluster.
 - Deploy and manage applications on your Amazon EKS cluster the same way that you would with any other Kubernetes environment.
+![alt text](https://raw.githubusercontent.com/aniketambasta/AWS_EKS/master/ss1.png)
 
 
 
