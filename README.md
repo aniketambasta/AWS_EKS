@@ -262,6 +262,14 @@ kubectl get all
 Copy the LoadBalancer Ip and paste in the browser and get access to deployed Application over EKS Cluster.
 
 
+## install aws CLI
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss11.png?raw=true)
+
+
+## to create IAM user with administrator access
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss10.png?raw=true)
+
+
    
 
 
