@@ -6,7 +6,7 @@
 # AWS_EKS_Project
 
 
-# task is to-:
+## Task is to-:
 ## Deploy a Kubernetes cluster in AWS EKS using Terraform.
 
 
