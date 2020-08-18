@@ -297,9 +297,9 @@ Copy the LoadBalancer Ip and paste in the browser and get access to deployed App
       
 
  ###  Terraform code of [cluster.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/cluster.yml)
-### Terraform coe of [wordpress.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/wordpress.yml)
-### Terraform coe of [mysql.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/mysql.yml)
-### Terraform coe of [kustomization.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/kustomization.yml)
+### Terraform code of [wordpress.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/wordpress.yml)
+### Terraform code of [mysql.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/mysql.yml)
+### Terraform code of [kustomization.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/kustomization.yml)
         
       
       
