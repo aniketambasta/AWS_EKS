@@ -226,7 +226,7 @@ spec:
           claimName: wp
 ```
 
-Now we will create a kustomization file.
+Now we will create a **kustomization** file.
 ```
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
@@ -239,7 +239,7 @@ resources:
   - wordpress.yml
 ```
 
-Now run the file using given command, this command will execute the kustomization.yml file 
+Now run the file using given command, this command will execute the **kustomization.yml** file 
 ```
 kubectl create -k .   
 ```
@@ -255,7 +255,7 @@ kubectl create -k .
   
           
           
-Now run the below command to get LoadBalancer Ip , EKS uses external loadbalancer that also make pods public to outside world so run the command given below.
+Now run the below command to get **LoadBalancer Ip** , EKS uses external loadbalancer that also make pods public to outside world so run the command given below.
 ```
 kubectl get all       
    ```
