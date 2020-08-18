@@ -239,6 +239,10 @@ resources:
   - wordpress.yml
 ```
 
+Now run the file using given command, this command will execute the kustomization.yml file 
+```
+kubectl create -k .   
+```
 
 
 
@@ -285,12 +289,12 @@ Copy the LoadBalancer Ip and paste in the browser and get access to deployed App
 
 
 
-
+##  Summary of the task in brief-:
 
 
 ### Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service that makes it easy for you to run Kubernetes on AWS without needing to install, operate, and maintain       your own Kubernetes control plane.
 
-## Steps:
+### Steps:
 
 #### 1.Download the AWS CLI program, add it to path variables and configure it to use AWS using the command - aws configure --profile Admin. As terraform will also be using the same credentials for contacting AWS.
 
