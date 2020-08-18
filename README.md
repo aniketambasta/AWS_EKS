@@ -85,40 +85,170 @@ now we have to Update the config file in .kube folder using the aws command.
 ```
 aws eks update-kubeconfig --name clustername
    ```
-   
-   ###  to create a deployment
-   ```
-   
-   apiVersion: apps/v1
+
+### to create a mysql deployment
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: wordpress
+    tier: mysql
+  clusterIP: None
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myweb-deployment
+  name: mysql
   labels:
-    app: kubernetes
+    app: wordpress
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: kubernetes
+      app: wordpress
+      tier: mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: kubernetes
+        app: wordpress
+        tier: mysql
     spec:
       containers:
-      - image: httpd
-        name: kubernetes
+      - image: mysql:5.6
+        name: mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password
+        ports:
+        - containerPort: 3306
+          name: mysql
         volumeMounts:
-        - name: aniket_storage
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql
+```
+
+### to create wordpress deployment
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: wordpress
+    tier: frontend
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wp
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+spec:
+  selector:
+    matchLabels:
+      app: wordpress
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: wordpress
+        tier: frontend
+    spec:
+      containers:
+      - image: wordpress:4.8-apache
+        name: wordpress
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: wordpress-mysql
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password
+        ports:
+        - containerPort: 80
+          name: wordpress
+        volumeMounts:
+        - name: wordpress-persistent-storage
           mountPath: /var/www/html
       volumes:
-      - name: aniket_storage
+      - name: wordpress-persistent-storage
         persistentVolumeClaim:
-          claimName: ambastapvc
+          claimName: wp
+```
 
-```                    
+Now we will create a kustomization file.
+```
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+secretGenerator:
+  - name: mysql-pass
+    literals:
+        - password=redhat
+resources:
+  - mysql.yml
+  - wordpress.yml
+```
+
+
+
+
+
+
+
+
+
+
+  
           
           
 Now run the below command to get LoadBalancer Ip , EKS uses external loadbalancer that also make pods public to outside world so run the command given below.
