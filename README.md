@@ -1,6 +1,6 @@
 
 
-![alt text](https://miro.medium.com/max/2800/1*c_alK7iZgOyKMTCQBxpOBQ.png)
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss12.png?raw=true)
 
 
 # AWS_EKS_Project
