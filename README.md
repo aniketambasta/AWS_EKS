@@ -47,7 +47,7 @@ Amazon **VPC** for isolation
 - Then, launch worker nodes that register with the Amazon EKS cluster. We provide you with an AWS CloudFormation template that automatically configures your nodes.
 - When your cluster is ready, you can configure your favorite Kubernetes tools (such as kubectl) to communicate with your cluster.
 - Deploy and manage applications on your Amazon EKS cluster the same way that you would with any other Kubernetes environment.
-![alt text](https://raw.githubusercontent.com/aniketambasta/AWS_EKS/master/ss1.png)
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss1.png?raw=true)
 
 
 
@@ -263,13 +263,36 @@ Copy the LoadBalancer Ip and paste in the browser and get access to deployed App
 
 
    
+
+
+      
+      
+## Few ScreenShots of the tasks are-:
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss2.PNG?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss4.png?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss3.png?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss5.png?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss6.png?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss7.png?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss8.png?raw=true)
+
+![alt text](https://github.com/aniketambasta/AWS_EKS_data/blob/master/ss9.png?raw=true)
       
       
       
       
-      
-      
-      
+
+ ###  Terraform code of [cluster.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/cluster.yml)
+### Terraform coe of [wordpress.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/wordpress.yml)
+### Terraform coe of [mysql.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/mysql.yml)
+### Terraform coe of [kustomization.yml](https://github.com/aniketambasta/AWS_EKS_data/blob/master/kustomization.yml)
+        
       
       
       
