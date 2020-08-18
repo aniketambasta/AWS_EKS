@@ -77,6 +77,58 @@ we have to run our cluster by running this command-:
       eksctl create cluster -f cluster.yml
    ```   
    
+When the cluster has successfully created verify using given below command.
+```
+            ekstcl get cluster
+   ```
+now we have to Update the config file in .kube folder using the aws command.
+```
+aws eks update-kubeconfig --name clustername
+   ```
+   
+   ###  to create a deployment
+   ```
+   
+   apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myweb-deployment
+  labels:
+    app: kubernetes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubernetes
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: kubernetes
+    spec:
+      containers:
+      - image: httpd
+        name: kubernetes
+        volumeMounts:
+        - name: aniket_storage
+          mountPath: /var/www/html
+      volumes:
+      - name: aniket_storage
+        persistentVolumeClaim:
+          claimName: ambastapvc
+
+```                    
+          
+          
+Now run the below command to get LoadBalancer Ip , EKS uses external loadbalancer that also make pods public to outside world so run the command given below.
+```
+kubectl get all       
+   ```
+Copy the LoadBalancer Ip and paste in the browser and get access to deployed Application over EKS Cluster.
+
+
+   
       
       
       
