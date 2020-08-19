@@ -17,7 +17,7 @@
 #### Amazon EKS is also integrated with many AWS services to provide scalability and security for your applications, including the following:
 Amazon **ECR** for container images
 
-Elastic Load Balancing for load distribution
+*Elastic Load Balancing for load distribution.*
 
 **IAM** for authentication
 
